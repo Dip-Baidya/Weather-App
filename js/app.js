@@ -6,11 +6,11 @@ function getWeather() {
     const apiKey = `89284f2573b239b4fc5e51d5493f7980`;
     const inputCity = document.getElementById('Input-city').value;
 
-    fetch(`api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}`)
         .then((response) => response.json())
         .then((data) => {
             const statusIcon = data.weather[0].icon;
-            document.getElementById("status-icon").src = statusIcon;
+            document.getElementById("status-icon").src =`https://openweathermap.org/img/wn/${statusIcon}@2x.png`;
             const cityName = data.name;
             document.getElementById("city-name").innerText = cityName;
             const temperature = data.main.temp;
