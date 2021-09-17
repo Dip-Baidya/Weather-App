@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Temperature Hot</title>
+    <title>Weather App</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,20 +22,20 @@
     <div class="container">
         <form class="col-md-6 m-auto py-5">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <input id="Input-city" type="text" class="form-control" placeholder="Enter a location for Weather ...">
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-danger">Search</button>
+                    <button id="search" type="button" class="btn btn-danger">Search</button>
                 </div>
             </div>
         </form>
         <div class="weather-status text-white text-center">
-            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
-            <h1>Dhaka</h1>
-            <h3><span>38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <img id="status-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city-name">Dhaka</h1>
+            <h3><span id="temperature">38.06</span>&deg;C</h3>
+            <h1 id="status" class="lead">Clouds</h1>
         </div>
     </div>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>
